@@ -1,6 +1,6 @@
 package com.example.hazelnews.di
 
-import com.example.hazelnews.data.remote.api.NewsApI
+import com.example.hazelnews.data.remote.api.NewsApi
 import com.example.hazelnews.data.remote.datasource.RemoteDataSource
 import com.example.hazelnews.data.remote.datasource.RemoteDataSourceImpl
 import com.example.hazelnews.util.Constants.Companion.BASE_URL
@@ -37,13 +37,13 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideNewsApi(retrofit: Retrofit): NewsApI {
-        return retrofit.create(NewsApI::class.java)
+    fun provideNewsApi(retrofit: Retrofit): NewsApi {
+        return retrofit.create(NewsApi::class.java)
     }
 
     @Provides
     @Singleton
-    fun provideRemoteDataSource(newsApi: NewsApI): RemoteDataSource {
+    fun provideRemoteDataSource(newsApi: NewsApi): RemoteDataSource {
         return RemoteDataSourceImpl(newsApi)
     }
 }

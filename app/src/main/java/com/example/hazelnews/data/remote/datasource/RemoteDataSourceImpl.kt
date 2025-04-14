@@ -1,6 +1,6 @@
 package com.example.hazelnews.data.remote.datasource
 
-import com.example.hazelnews.data.remote.api.NewsApI
+import com.example.hazelnews.data.remote.api.NewsApi
 import com.example.hazelnews.domain.models.NewsResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -8,7 +8,7 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class RemoteDataSourceImpl @Inject constructor(
-    private val newsApi: NewsApI
+    private val newsApi: NewsApi
 ) : RemoteDataSource {
 
     override suspend fun getHeadlines(countryCode: String, page: Int): Response<NewsResponse> {

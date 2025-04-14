@@ -6,7 +6,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface NewsApI {
+interface NewsApi {
 
     @GET("v2/top-headlines")
     suspend fun getHeadlines(
