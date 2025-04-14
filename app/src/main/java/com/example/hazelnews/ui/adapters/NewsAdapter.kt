@@ -6,8 +6,7 @@ import com.example.hazelnews.databinding.ItemNewsBinding
 import com.example.hazelnews.domain.models.Article
 import com.hazelmobile.core.bases.adapter.BaseAdapter
 
-class NewsAdapter :
-    BaseAdapter<Article, ItemNewsBinding>(ItemNewsBinding::inflate, ArticleDiffCallback()) {
+class NewsAdapter : BaseAdapter<Article, ItemNewsBinding>(ItemNewsBinding::inflate, ArticleDiffCallback()) {
 
     override fun ItemNewsBinding.bindViews(model: Article) {
         // Load article image using Glide
