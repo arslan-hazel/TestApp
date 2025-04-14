@@ -13,7 +13,7 @@ class RemoteDataSourceImpl @Inject constructor(
 
     override suspend fun getHeadlines(countryCode: String, page: Int): Response<NewsResponse> {
         return withContext(Dispatchers.IO) {
-            newsApi.getHeadlines(countryCode, page)
+            newsApi.getNewsHeadlines(countryCode, page)
 
         }
 
